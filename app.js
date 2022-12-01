@@ -27,7 +27,7 @@ http.createServer((req, res) => {
             renderHtml('./about.html', res)
             break;
         case '/contact':
-            renderHtml('./contact.html', res)
+            renderHtml('./kontak.html', res)
         default:
             renderHtml('./index.html', res)
             break;
