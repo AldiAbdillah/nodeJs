@@ -1,0 +1,40 @@
+<div class="container mt-10 mx-auto">
+    <div class="bg-slate-200 w-[30%] mx-auto rounded-md shadow-lg pb-10 p-4">
+        <h2 class="text-3xl text-center font-semibold mb-10 underline">Detail Contact</h2>
+
+        <% if (!contact) { %>
+        <div class="bg-red-300 text-center text-base font-semibold rounded-lg p-1">Data tidak ditemukan</div>
+        <% } else { %>
+
+        <img src="https://source.unsplash.com/300x300?person" alt="foto orang"
+            class="w-[150px] mx-auto rounded-full border-2 border-slate-600 shadow-lg mb-4">
+        <table class="table-auto border-collapse mx-auto border-2">
+            <tbody>
+                <tr>
+                    <td class="p-1 text-lg font-semibold">Nama</td>
+                    <td class="p-1 w-[30px] text-lg font-semibold">:</td>
+                    <td class="p-1 text-lg font-semibold"><%= contact.nama %> </td>
+                </tr>
+                <tr>
+                    <td class="p-1 text-lg font-semibold">No Hp</td>
+                    <td class="p-1 text-lg font-semibold">:</td>
+                    <td class="p-1 text-lg font-semibold"><%= contact.nohp %> </td>
+                </tr>
+                <tr>
+                    <td class="p-1 text-lg font-semibold">Email</td>
+                    <td class="p-1 text-lg font-semibold">:</td>
+                    <td class="p-1 text-lg font-semibold"><%= contact.email %> </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <% } %>
+
+        <div class="w-3/5 text-center mx-auto mt-7">
+            <a href="/contact"
+                class="text-base mx-auto font-semibold text-white bg-slate-800 rounded-md shadow-lg p-2 hover:text-black hover:bg-white hover: border-2 hover:border-black">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+        </div>
+    </div>
+</div>
