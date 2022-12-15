@@ -1,6 +1,15 @@
 <div class="container mt-10">
     <h3 class="text-center font-bold text-4xl">Daftar Kontak</h3>
-    <table class="border-collapse mt-10 mx-auto w-4/5">
+    <div class="w-4/5 mx-auto mt-10">
+    <a href="/contact/add" class="bg-blue-500 py-2 px-4 rounded-lg shadow-md text-white hover:bg-blue-700">Tambah Data</a>
+
+        <% if (msg.length !== 0 ) { %>
+         <div class="bg-green-300 text-green-800 px-5 rounded-md shadow-md mx-auto m-5 h-10 flex items-center justify-center">
+            <h4 class="text-green-900 text-lg font-semibold"><%= msg %></h4>
+        </div>
+        <% } %>
+
+    <table class="border-collapse mt-5 mx-auto w-full">
         <thead>
             <tr>
                 <th class="p-3 bg-slate-800 text-slate-200 rounded-tl-lg">#</th>
@@ -24,11 +33,12 @@
                 <td class="p-3 border-b-2 text-center border-slate-400"><%= contact.nohp %> </td>
                 <td class="p-3 border-b-2 text-center border-slate-400">
                     <a href="/contact/<%= contact.nama %> "
-                        class="bg-sky-500 text-white py-1 px-4 rounded-full hover:bg-sky-600">Detail</a>
+                        class="bg-blue-500 text-white py-1 px-4 rounded-full hover:bg-blue-600">Detail</a>
                 </td>
             </tr>
             <% }) %>
 
         </tbody>
     </table>
+    </div>
 </div>
